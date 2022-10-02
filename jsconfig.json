@@ -5,8 +5,8 @@
     "module": "ESNext",
     /**
      * svelte-preprocess cannot figure out whether you have
-     * a value or a type, so tell TypeScript to enforce using
-     * `import type` instead of `import` for Types.
+     * a value or a entity_type, so tell TypeScript to enforce using
+     * `import entity_type` instead of `import` for Types.
      */
     "importsNotUsedAsValues": "error",
     "isolatedModules": true,
@@ -28,7 +28,7 @@
   },
   /**
    * Use global.d.ts instead of compilerOptions.types
-   * to avoid limiting type declarations.
+   * to avoid limiting entity_type declarations.
    */
   "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
 }

@@ -1,10 +1,10 @@
 [package]
 name = "hive-app"
-version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+version = "0.0.1"
+description = "A global management app to govern all others"
+authors = ["Medhi FOULGOC"]
+license = "Commercial"
+repository = "https://github.com/Kazetheroth/Hive-App"
 edition = "2021"
 rust-version = "1.57"
 
