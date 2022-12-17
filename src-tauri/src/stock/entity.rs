@@ -26,7 +26,7 @@ pub fn stringify_entity(entity: &Entity) -> String {
 }
 
 pub fn save(entity: &Entity) {
-    let path = format!("/data/stock/{}.json", entity.name);
+    let path = format!("data/stock/{}.json", entity.name);
     //let json = stringify_entity(entity);
     let result = serde_json::to_writer(&File::create(path).unwrap(), &entity);
 }

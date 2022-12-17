@@ -18,17 +18,17 @@ fn create_stock_entity(stockString: &str) -> String {
     format!("{}", true)
 }
 
-fn handle_stock_creation(stockString: &str){
+fn handle_stock_creation(stockString: &str) -> String {
     let e = stock::entity::entity_from_string(stockString);
     println!("Yo {}", e.name);
     stock::entity::save(&e);
-    println!("Yo2");
+    format!("{}", true)
 }
 
 fn main() {
-    file_manager::create_dir_if_not_exist("/data/stock/");
-    file_manager::create_dir_if_not_exist("/data/json/");
-    file_manager::create_dir_if_not_exist("/data/img/");
+    file_manager::create_dir_if_not_exist("data/stock/");
+    file_manager::create_dir_if_not_exist("data/json/");
+    file_manager::create_dir_if_not_exist("data/img/");
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet])
         .invoke_handler(tauri::generate_handler![create_stock_entity])
