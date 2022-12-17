@@ -3,6 +3,8 @@
     windows_subsystem = "windows"
 )]
 
+use std::fs;
+
 mod stock;
 mod file_manager;
 
@@ -22,6 +24,18 @@ fn handle_stock_creation(stockString: &str) -> String {
     let e = stock::entity::entity_from_string(stockString);
     println!("Yo {}", e.name);
     stock::entity::save(&e);
+    format!("{}", true)
+}
+
+fn handle_stock_load() -> String {
+    let paths = fs::read_dir("data/stock/").unwrap();
+    for path in paths {
+        let string = path.unwrap().file_name().into_string();
+        //let file = file_manager::read_entity_from_path(&string.unwrap());
+        //println!("Yo {}", &string.unwrap());
+        format!("{}", &string.unwrap());
+    }
+    //format!("{}", string.unwrap())
     format!("{}", true)
 }
 

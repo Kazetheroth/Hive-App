@@ -17,9 +17,15 @@
         const msg = await invoke("create_stock_entity", { stockString });
         console.log(msg);
     }
+
+    async function handle_stock_load(){
+        console.log("loading...")
+        const msg = await invoke("handle_stock_load");
+        console.log(msg);
+    }
 </script>
 
-<div class="container">
+<div class="container" on:loadstart={handle_stock_load}>
     <h2>Créer un objet</h2>
     <div class="row">
         <input id="entity-name" placeholder="Nommez votre objet" bind:value={entity.name} class="entity-ipt">

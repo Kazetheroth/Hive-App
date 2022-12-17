@@ -8,8 +8,14 @@
     <img class="logo" src="/hive.png" />
   </div>
   <div class="row">
-    <button>
-      Stock
+    <button class="hive-btn">
+      Gestion des Stocks
+    </button>
+    <button class="hive-btn">
+      Comptabilité
+    </button>
+    <button class="hive-btn">
+      Gestion des paies
     </button>
   </div>
   <Stock />
@@ -25,6 +31,10 @@
   .logo:hover {
 
     filter: drop-shadow(0 0 2em #747bff);
+  }
+
+  .hive-btn{
+    margin: 10px 5px;
   }
 
 </style>
